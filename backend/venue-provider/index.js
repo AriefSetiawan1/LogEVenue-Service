@@ -17,6 +17,7 @@ app.get('/', (req, res) => {
 
 app.use('/api/venues', require('./routes/venueRoutes'));
 app.use('/api/reservations', require('./routes/reservationRoutes'));
+app.use('/api/public/webhook', require('./routes/webhookRoutes'));
 
 const { graphqlHTTP } = require('express-graphql');
 const venueSchema = require('./graphql/venueSchema');
