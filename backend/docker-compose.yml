@@ -46,6 +46,7 @@ services:
       - DB_PASSWORD=root
       - DB_NAME=venue_db
       - JWT_SECRET=rahasia_negara_grup_b
+      - TITIKTEMU_BASE_URL=https://c272d82cd7e1.ngrok-free.app/graphql
     depends_on:
       - mysql-db
     networks:
@@ -82,6 +83,7 @@ services:
       - DB_PASSWORD=root
       - DB_NAME=inventory_consumer_db
       - JWT_SECRET=rahasia_negara_grup_b
+      - TITIKTEMU_BASE_URL=https://c272d82cd7e1.ngrok-free.app/graphql
       - VENUE_SERVICE_URL=http://venue-provider:4002/graphql
       - LOGISTICS_SERVICE_URL=http://logistics-service:4003/graphql
     depends_on:
